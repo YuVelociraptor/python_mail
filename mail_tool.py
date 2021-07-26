@@ -49,24 +49,3 @@ def get_bcc(email_obj):
 
     return ret
 
-
-
-for file in os.listdir(dir):
-
-
-    f = open(dir + file)
-    data = f.read()
-    f.close()
-
-    email_object = email.message_from_string(data)
-
-    print(file)
-    print(get_email_subject(email_object))
-
-    print(email_object.keys())
-    # print(email_object['From'])
-    # print(email_object['To'])
-    # print(email_object['Cc'])
-    # print(email_object['Bcc'])
-    print(get_bcc(email_object))
-    print('\n\n')
